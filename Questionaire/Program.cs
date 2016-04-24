@@ -76,13 +76,15 @@ namespace ConsoleApplication12
                 {
                     Console.WriteLine("subjects\n1- Computer Science Seminar  2-Senior CS Project II.  3-Modeling and Simulation  4- Systems Analysis & Design  5- Electronic Commerce\n\n enter the number of the subject you want ");
                 }*/
-
-                Console.WriteLine(s.cor[1].name + "   dr." + " " + s.cor[1].getDoctr().name);
-                Console.WriteLine(s.cor[2].name + "   dr." + " " + s.cor[2].getDoctr().name);
-                Console.WriteLine(s.cor[3].name + "   dr." + " " + s.cor[3].getDoctr().name);
-                Console.WriteLine(s.cor[4].name + "   dr." + " " + s.cor[4].getDoctr().name);
-                Console.WriteLine(s.cor[5].name + "   dr." + " " + s.cor[5].getDoctr().name);
-                Console.WriteLine(s.cor[6].name + "   dr." + " " + s.cor[6].getDoctr().name);
+                for (int j = 1; j <= 6; j++)
+                {
+                    Console.WriteLine(s.cor[j].name + "   dr." + " " + s.cor[j].getDoctr().name);
+                }
+                //Console.WriteLine(s.cor[2].name + "   dr." + " " + s.cor[2].getDoctr().name);
+                //Console.WriteLine(s.cor[3].name + "   dr." + " " + s.cor[3].getDoctr().name);
+                //Console.WriteLine(s.cor[4].name + "   dr." + " " + s.cor[4].getDoctr().name);
+                //Console.WriteLine(s.cor[5].name + "   dr." + " " + s.cor[5].getDoctr().name);
+                //Console.WriteLine(s.cor[6].name + "   dr." + " " + s.cor[6].getDoctr().name);
 
                 Console.WriteLine("enter the number of course ");
 
@@ -91,18 +93,24 @@ namespace ConsoleApplication12
                 if (true)
                 {
                     Console.ForegroundColor = ConsoleColor.Cyan;
-                    if (subject == 1)
-                        Console.WriteLine((s.cor[1].name) + " " + (s.cor[1].code) + "\n\n");
-                    if (subject == 2)
-                        Console.WriteLine((s.cor[2].name) + " " + (s.cor[2].code) + "\n\n");
-                    if (subject == 3)
-                        Console.WriteLine((s.cor[3].name) + " " + (s.cor[3].code) + "\n\n");
-                    if (subject == 4)
-                        Console.WriteLine((s.cor[4].name) + " " + (s.cor[4].code) + "\n\n");
-                    if (subject == 5)
-                        Console.WriteLine((s.cor[5].name) + " " + (s.cor[5].code) + "\n\n");
-                    if (subject == 6)
-                        Console.WriteLine((s.cor[6].name) + " " + (s.cor[6].code) + "\n\n");
+                    for (int j = 1; j <= 6; j++)
+                    {
+                        if (subject == j)
+                            Console.WriteLine((s.cor[j].name) + " " + (s.cor[j].code) + "\n\n");
+                    }
+
+                    //if (subject == 1)
+                    //    Console.WriteLine((s.cor[1].name) + " " + (s.cor[1].code) + "\n\n");
+                    //if (subject == 2)
+                    //    Console.WriteLine((s.cor[2].name) + " " + (s.cor[2].code) + "\n\n");
+                    //if (subject == 3)
+                    //    Console.WriteLine((s.cor[3].name) + " " + (s.cor[3].code) + "\n\n");
+                    //if (subject == 4)
+                    //    Console.WriteLine((s.cor[4].name) + " " + (s.cor[4].code) + "\n\n");
+                    //if (subject == 5)
+                    //    Console.WriteLine((s.cor[5].name) + " " + (s.cor[5].code) + "\n\n");
+                    //if (subject == 6)
+                    //    Console.WriteLine((s.cor[6].name) + " " + (s.cor[6].code) + "\n\n");
                     Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.WriteLine("quistionaire roles : for excelent press 1 for vgood press 2 fpr good press 3 for bad press 4 \n");
                     Console.WriteLine("The Lecture:\n");
@@ -341,21 +349,24 @@ namespace ConsoleApplication12
 
             string[] pass = new string[15];
             student[] s = new student[15];
-            s[0] = new student();
-            s[1] = new student();
-            s[2] = new student();
-            s[3] = new student();
-            s[4] = new student();
-            s[5] = new student();
-            s[6] = new student();
-            s[7] = new student();
-            s[8] = new student();
-            s[9] = new student();
-            s[10] = new student();
-            s[11] = new student();
-            s[12] = new student();
-            s[13] = new student();
-            s[14] = new student();
+            for (int j = 0; j <= 14; j++)
+            {
+                s[j] = new student();
+            }
+            //s[1] = new student();
+            //s[2] = new student();
+            //s[3] = new student();
+            //s[4] = new student();
+            //s[5] = new student();
+            //s[6] = new student();
+            //s[7] = new student();
+            //s[8] = new student();
+            //s[9] = new student();
+            //s[10] = new student();
+            //s[11] = new student();
+            //s[12] = new student();
+            //s[13] = new student();
+            //s[14] = new student();
             s[0].id = Convert.ToInt32(7);
             s[1].id = Convert.ToInt32(5);
             s[2].id = Convert.ToInt32(6);
@@ -386,6 +397,7 @@ namespace ConsoleApplication12
             s[12].pass = "a13b13";
             s[13].pass = "a14b14";
             s[14].pass = "a15b15";
+
 
             doctor d85 = new doctor();
             doctor d86 = new doctor();
