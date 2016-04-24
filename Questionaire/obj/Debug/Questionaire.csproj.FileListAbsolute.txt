@@ -1,0 +1,6 @@
+c:\users\masterdevil\documents\visual studio 2015\Projects\Questionaire\Questionaire\bin\Debug\Questionaire.exe.config
+c:\users\masterdevil\documents\visual studio 2015\Projects\Questionaire\Questionaire\obj\Debug\Questionaire.csprojResolveAssemblyReference.cache
+c:\users\masterdevil\documents\visual studio 2015\Projects\Questionaire\Questionaire\bin\Debug\Questionaire.exe
+c:\users\masterdevil\documents\visual studio 2015\Projects\Questionaire\Questionaire\bin\Debug\Questionaire.pdb
+c:\users\masterdevil\documents\visual studio 2015\Projects\Questionaire\Questionaire\obj\Debug\Questionaire.exe
+c:\users\masterdevil\documents\visual studio 2015\Projects\Questionaire\Questionaire\obj\Debug\Questionaire.pdb
