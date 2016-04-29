@@ -4,3 +4,5 @@ c:\users\masterdevil\documents\visual studio 2015\Projects\Questionaire\Question
 c:\users\masterdevil\documents\visual studio 2015\Projects\Questionaire\Questionaire\bin\Debug\Questionaire.pdb
 c:\users\masterdevil\documents\visual studio 2015\Projects\Questionaire\Questionaire\obj\Debug\Questionaire.exe
 c:\users\masterdevil\documents\visual studio 2015\Projects\Questionaire\Questionaire\obj\Debug\Questionaire.pdb
+C:\Users\Masterdevil\documents\visual studio 2015\Projects\Questionaire\Questionaire\obj\Debug\Questionaire.Properties.Resources.resources
+C:\Users\Masterdevil\documents\visual studio 2015\Projects\Questionaire\Questionaire\obj\Debug\Questionaire.csproj.GenerateResource.Cache

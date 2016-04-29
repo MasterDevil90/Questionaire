@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Questionaire;
+using System.IO;
+using Questionaire.Properties;
 
-namespace ConsoleApplication12
+namespace Questionaire
 {
 
     
@@ -44,222 +46,59 @@ namespace ConsoleApplication12
             {
                 int x;
                 Console.ForegroundColor = ConsoleColor.Cyan;
-                /*if (code[0] == 1)
-                {
-                    Console.WriteLine("subjects\n1- Arabic Language  2- Introduction to Computer Applications  3-Introduction to Computer Programming  4- English Language I  5- Calculus I  6- Physics I\n\n enter the number of the subject you want ");
-                }
-                if (code[0] == 2)
-                {
-                    Console.WriteLine("subjects\n1- Structured Programming  2-English Language II  3- Behavior Psychology  4-Fundamentals of Information Sys.  5-Calculus II.  6-Physcis II.\n\n enter the number of the subject you want ");
-                }
-                if (code[0] == 3)
-                {
-                    Console.WriteLine("subjects\n1- Data Structures  2-Logic Design  3- English Language III  4- Scientific Thinking  5- Linear Algebra  6- Discrete Mathematics\n\n enter the number of the subject you want ");
-                }
-                if (code[0] == 4)
-                {
-                    Console.WriteLine("subjects\n1-concept  2- Object-Oriented Programming  3- Operating Systems I  4- Electronics For Computers  5-  Applied Prob. and Statistics  6- operation research\n\n enter the number of the subject you want ");
-                }
-                if (code[0] == 5)
-                {
-                    Console.WriteLine("subjects\n1-file organization  2-software engenering  3-modern and development toles  4-compiler  5-algorithm  6-computer archetecture\n\n enter the number of the subject you want ");
-                }
-                if (code[0] == 6)
-                {
-                     Console.WriteLine("subjects\n1- Data Communication and Networking  2- System Programming and Assembley Lang.  3-Introduction to Artificial Intelligence  4-Introduction to Database  5-numerical methods  6-  Computer Graphics\n\n enter the number of the subject you want ");
-                }
-                if (code[0] == 7)
-                {
-                    Console.WriteLine("subjects\n1-Selected Topics in Computer Science  2- Pattern Recognition  3- Computer Interface and Multimedia Systems  4- Senior CS Project I.  5- Introduction to Advertising  6- Human Anatomy I  7-  Medical Biochemistry I (Elective)\n\n enter the number of the subject you want ");
-                }
-                if (code[0]== 8)
-                {
-                    Console.WriteLine("subjects\n1- Computer Science Seminar  2-Senior CS Project II.  3-Modeling and Simulation  4- Systems Analysis & Design  5- Electronic Commerce\n\n enter the number of the subject you want ");
-                }*/
+
+                
+
+                /**************GET DOC NAME***********/
+
                 for (int j = 1; j <= 6; j++)
                 {
                     Console.WriteLine(s.cor[j].name + "   dr." + " " + s.cor[j].getDoctr().name);
                 }
-                //Console.WriteLine(s.cor[2].name + "   dr." + " " + s.cor[2].getDoctr().name);
-                //Console.WriteLine(s.cor[3].name + "   dr." + " " + s.cor[3].getDoctr().name);
-                //Console.WriteLine(s.cor[4].name + "   dr." + " " + s.cor[4].getDoctr().name);
-                //Console.WriteLine(s.cor[5].name + "   dr." + " " + s.cor[5].getDoctr().name);
-                //Console.WriteLine(s.cor[6].name + "   dr." + " " + s.cor[6].getDoctr().name);
-
+               
+                /**************GET COURSES*********/
                 Console.WriteLine("enter the number of course ");
 
                 Console.ForegroundColor = ConsoleColor.White;
                 int subject = Convert.ToInt32(Console.ReadLine());
                 if (true)
                 {
+
                     Console.ForegroundColor = ConsoleColor.Cyan;
+
                     for (int j = 1; j <= 6; j++)
                     {
                         if (subject == j)
                             Console.WriteLine((s.cor[j].name) + " " + (s.cor[j].code) + "\n\n");
                     }
+                    
+                    /********* SURVY QUESTIONS********/
 
-                    //if (subject == 1)
-                    //    Console.WriteLine((s.cor[1].name) + " " + (s.cor[1].code) + "\n\n");
-                    //if (subject == 2)
-                    //    Console.WriteLine((s.cor[2].name) + " " + (s.cor[2].code) + "\n\n");
-                    //if (subject == 3)
-                    //    Console.WriteLine((s.cor[3].name) + " " + (s.cor[3].code) + "\n\n");
-                    //if (subject == 4)
-                    //    Console.WriteLine((s.cor[4].name) + " " + (s.cor[4].code) + "\n\n");
-                    //if (subject == 5)
-                    //    Console.WriteLine((s.cor[5].name) + " " + (s.cor[5].code) + "\n\n");
-                    //if (subject == 6)
-                    //    Console.WriteLine((s.cor[6].name) + " " + (s.cor[6].code) + "\n\n");
                     Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine("quistionaire roles : for excelent press 1 for vgood press 2 fpr good press 3 for bad press 4 \n");
+                    Console.WriteLine("Questionaire roles : for excelent press 1 for vgood press 2 for good press 3 for bad press 4 \n");
                     Console.WriteLine("The Lecture:\n");
 
-                    Boolean flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine(" Allows opportunities for asking questions");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
-                    flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("Has an effective lecture delivery");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
-                    flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("Has good rapport with learners");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
-                    flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("Is approachable and friendly");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
-                    flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("Is respectful towards students");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
-                    flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("Is able to teach at the students’ level");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
-                    flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("Enables easy note-taking");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
-                    flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("Provides useful handouts of notes");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
-                    flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("Would help students by providing printed notes");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
-                    flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("Has a wide subject knowledge");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
-                    flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("Maintains student interest during lectures");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
-                    flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("Gives varied and lively lectures");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
-                    flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("Is clear and comprehensible in lectures");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
-                    flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("Gives lectures which are too fast to take in");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
-                    flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("Gives audible lectures");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
-                    flag = false;
-                    while (!flag)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("Gives structured and organised lectures");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        x = Convert.ToInt32(Console.ReadLine());
-                        flag = quistioner(x);
-                    }
+                   // string Quest = Resources.Questions;
 
+                    //reads lines from questions.txt and stores into array
+                    string[] question = File.ReadAllLines
+                (@"C:\Users\Masterdevil\Documents\Visual Studio 2015\Projects\Questionaire\Questionaire\Questions.txt");
+
+                    //flag def
+                    Boolean flag = false;
+
+                    foreach (string line in question) //goes through everyquestion from the lines 
+                    {
+                        while (!flag)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.WriteLine(line); // question gets printed from each index of array
+                            Console.ForegroundColor = ConsoleColor.White;
+                            x = Convert.ToInt32(Console.ReadLine());
+                            flag = quistioner(x);
+                        }
+                        flag = false;
+                    }
                     Console.ForegroundColor = ConsoleColor.Green;
                     total_rate(excelent * 4, vgood * 3, good * 2, bad * 1);
 
@@ -267,6 +106,8 @@ namespace ConsoleApplication12
             }
         }
 
+
+        // ADDS VALUES TO CALCULATE
         public Boolean quistioner(int x)
         {
 
@@ -297,7 +138,7 @@ namespace ConsoleApplication12
             }
             return true;
         }
-
+        //CALCULATES THE RATE OF THE QUESTION RATINGS
         static void total_rate(int excelent, int vgood, int good, int bad)
         {
             int sum = excelent + vgood + good + bad;
@@ -329,16 +170,20 @@ namespace ConsoleApplication12
 
             }
         }
-        class program
-        {
-            //source of the quistions "http://www.economicsnetwork.ac.uk/handbook/questionnaires/5"
-            //source of how to change the font color "http://www.dotnetperls.com/console-color" 
-            //rating (bad=1point good=2points vgood=3points excellent=4points) worest case(all are bad )=16 the max case (all are excellent)=64 , 12 point between each other
-            //if we want the second method of rating change all "total_rate(excelent*4, vgood*3, good*2, bad*1);" to "total_rate(excelent, vgood, good, bad);"
 
 
 
-        }
+
+        //class program
+        //{
+        //    //source of the quistions "http://www.economicsnetwork.ac.uk/handbook/questionnaires/5"
+        //    //source of how to change the font color "http://www.dotnetperls.com/console-color" 
+        //    //rating (bad=1point good=2points vgood=3points excellent=4points) worest case(all are bad )=16 the max case (all are excellent)=64 , 12 point between each other
+        //    //if we want the second method of rating change all "total_rate(excelent*4, vgood*3, good*2, bad*1);" to "total_rate(excelent, vgood, good, bad);"
+
+
+
+        //}
 
 
 
@@ -355,18 +200,8 @@ namespace ConsoleApplication12
             }
             //s[1] = new student();
             //s[2] = new student();
-            //s[3] = new student();
-            //s[4] = new student();
-            //s[5] = new student();
-            //s[6] = new student();
-            //s[7] = new student();
-            //s[8] = new student();
-            //s[9] = new student();
-            //s[10] = new student();
-            //s[11] = new student();
-            //s[12] = new student();
-            //s[13] = new student();
-            //s[14] = new student();
+            
+
             s[0].id = Convert.ToInt32(7);
             s[1].id = Convert.ToInt32(5);
             s[2].id = Convert.ToInt32(6);
